@@ -1,71 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yiğit Çakman — Freelance Senior Game Developer</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Yiğit ÇAKMAN — Game Developer</title>
 
     <meta
         name="description"
-        content="Yiğit Çakman — Freelance Senior Game Developer specializing in multiplayer, gameplay systems, game development and technical projects."
+        content="Yiğit ÇAKMAN — Game Developer specializing in multiplayer, networked gameplay, gameplay systems and technical game development."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
+
     <style>
 
         :root {
+
             --bg-main: #060D17;
+
             --bg-card: #0A1422;
+
             --text-main: #FFFFFF;
+
             --text-muted: #8A99AD;
+
             --accent: #37A8FF;
+
             --accent-glow: rgba(55, 168, 255, 0.15);
+
             --border-color: rgba(255, 255, 255, 0.08);
+
             --font-main: 'Inter', sans-serif;
+
             --container-width: 1140px;
+
         }
+
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
 
         body {
+
             background-color: var(--bg-main);
+
             color: var(--text-main);
+
             font-family: var(--font-main);
+
             line-height: 1.6;
+
             -webkit-font-smoothing: antialiased;
+
         }
 
+
         a {
+
             color: inherit;
+
             text-decoration: none;
+
             transition: color 0.2s ease;
+
         }
+
 
         img,
         video {
+
             max-width: 100%;
+
         }
 
+
         .container {
+
             max-width: var(--container-width);
+
             margin: 0 auto;
+
             padding: 0 1.5rem;
+
         }
 
 
@@ -74,88 +124,153 @@
         ========================= */
 
         .navbar {
+
             position: fixed;
+
             top: 0;
+
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
 
-            background: rgba(6, 13, 23, 0.85);
+            background: rgba(6, 13, 23, 0.88);
+
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid var(--border-color);
+
         }
+
 
         .navbar-container {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             height: 70px;
+
         }
+
 
         .navbar-brand {
+
             font-weight: 800;
-            font-size: 1.25rem;
-            letter-spacing: 0.05em;
+
+            font-size: 1.1rem;
+
+            letter-spacing: 0.03em;
+
+            white-space: nowrap;
+
         }
+
 
         .nav-links {
+
             display: flex;
+
             gap: 2rem;
+
             list-style: none;
+
         }
+
 
         .nav-link {
+
             font-size: 0.9rem;
+
             font-weight: 500;
+
             color: var(--text-muted);
+
         }
+
 
         .nav-link:hover {
+
             color: var(--text-main);
+
         }
 
+
         .nav-toggle {
+
             display: none;
+
             background: none;
+
             border: none;
+
             color: var(--text-main);
+
             font-size: 1.5rem;
+
             cursor: pointer;
+
         }
 
 
         /* =========================
-           GENERAL SECTIONS
+           SECTIONS
         ========================= */
 
         section {
+
             padding: 6rem 0;
+
             border-bottom: 1px solid var(--border-color);
+
         }
+
 
         .section-label {
+
             font-size: 0.8rem;
+
             font-weight: 700;
+
             letter-spacing: 0.15em;
+
             color: var(--accent);
+
             text-transform: uppercase;
+
             margin-bottom: 0.5rem;
+
             display: block;
+
         }
+
 
         .section-title {
+
             font-size: 2.25rem;
+
             font-weight: 800;
+
             letter-spacing: -0.02em;
+
             margin-bottom: 1rem;
+
         }
 
+
         .section-desc {
+
             color: var(--text-muted);
-            max-width: 600px;
+
+            max-width: 650px;
+
             margin-bottom: 3rem;
+
             font-size: 1rem;
+
         }
 
 
@@ -164,87 +279,144 @@
         ========================= */
 
         .hero {
+
             min-height: 100vh;
+
             display: flex;
+
             align-items: center;
+
             padding-top: 70px;
+
             border-bottom: 1px solid var(--border-color);
+
         }
+
 
         .hero-grid {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 4rem;
+
             align-items: center;
+
         }
 
+
         .hero-badge {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 0.5rem;
 
             padding: 0.4rem 0.8rem;
 
             background: rgba(55, 168, 255, 0.05);
+
             border: 1px solid rgba(55, 168, 255, 0.2);
 
             border-radius: 20px;
 
             font-size: 0.8rem;
+
             font-weight: 500;
 
             color: var(--text-main);
 
             margin-bottom: 1.5rem;
+
         }
+
 
         .badge-dot {
+
             width: 6px;
+
             height: 6px;
+
             background-color: var(--accent);
+
             border-radius: 50%;
+
         }
+
 
         .hero-title {
+
             font-size: 3.25rem;
+
             font-weight: 800;
+
             line-height: 1.1;
+
             letter-spacing: -0.03em;
+
             margin-bottom: 1.5rem;
+
         }
+
 
         .hero-title span {
+
             color: var(--accent);
+
         }
+
 
         .hero-subtitle {
+
             font-size: 1.25rem;
+
             font-weight: 600;
+
             color: var(--text-main);
+
             margin-bottom: 0.75rem;
+
         }
+
 
         .hero-desc {
+
             color: var(--text-muted);
+
             font-size: 1rem;
+
             margin-bottom: 2rem;
-            max-width: 480px;
+
+            max-width: 520px;
+
         }
+
 
         .hero-buttons {
+
             display: flex;
+
             gap: 1rem;
+
             flex-wrap: wrap;
+
         }
 
+
         .btn {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
             padding: 0.85rem 1.75rem;
 
             font-size: 0.9rem;
+
             font-weight: 600;
 
             border-radius: 6px;
@@ -252,42 +424,64 @@
             cursor: pointer;
 
             transition: all 0.2s ease;
+
         }
+
 
         .btn-primary {
+
             background-color: var(--accent);
+
             color: #000;
+
         }
+
 
         .btn-primary:hover {
+
             opacity: 0.9;
+
             transform: translateY(-2px);
+
         }
+
 
         .btn-secondary {
+
             background: transparent;
+
             color: var(--text-main);
+
             border: 1px solid var(--border-color);
+
         }
 
+
         .btn-secondary:hover {
+
             border-color: rgba(255, 255, 255, 0.3);
+
             background: rgba(255, 255, 255, 0.02);
+
             transform: translateY(-2px);
+
         }
 
 
         /* HERO VIDEO */
 
         .hero-visual {
+
             position: relative;
 
             width: 100%;
+
             aspect-ratio: 16 / 10;
 
             background-color: var(--bg-card);
 
             border-radius: 8px;
+
             border: 1px solid var(--border-color);
 
             box-shadow: 0 0 30px var(--accent-glow);
@@ -295,19 +489,27 @@
             overflow: hidden;
 
             transition: transform 0.3s ease;
+
         }
+
 
         .hero-visual:hover {
+
             transform: scale(1.01);
+
         }
 
+
         .hero-visual video {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
             display: block;
+
         }
 
 
@@ -316,61 +518,89 @@
         ========================= */
 
         .featured-project {
+
             background: var(--bg-card);
 
             border: 1px solid var(--border-color);
+
             border-radius: 8px;
 
             padding: 2.5rem;
 
             margin-bottom: 2rem;
+
         }
 
+
         .featured-visual {
+
             width: 100%;
+
             height: 380px;
 
             background-color: rgba(255, 255, 255, 0.02);
 
             border: 1px solid var(--border-color);
+
             border-radius: 6px;
 
             overflow: hidden;
 
             margin-bottom: 2rem;
+
         }
 
+
         .featured-visual img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
             display: block;
+
         }
+
 
         .project-title {
+
             font-size: 1.75rem;
+
             font-weight: 700;
+
             margin-bottom: 0.75rem;
+
         }
+
 
         .project-desc {
+
             color: var(--text-muted);
+
             margin-bottom: 1.5rem;
+
             max-width: 700px;
+
         }
 
+
         .tags {
+
             display: flex;
+
             gap: 0.5rem;
 
             margin-bottom: 1.5rem;
 
             flex-wrap: wrap;
+
         }
 
+
         .tag {
+
             font-size: 0.75rem;
 
             padding: 0.25rem 0.6rem;
@@ -382,10 +612,14 @@
             border-radius: 4px;
 
             color: var(--text-muted);
+
         }
 
+
         .link-btn {
+
             display: inline-flex;
+
             align-items: center;
 
             gap: 0.5rem;
@@ -393,51 +627,72 @@
             color: var(--accent);
 
             font-weight: 600;
+
             font-size: 0.9rem;
+
         }
+
 
         .link-btn:hover {
+
             text-decoration: underline;
+
         }
 
+
         .projects-grid {
+
             display: grid;
 
             grid-template-columns: 1fr 1fr;
 
             gap: 2rem;
+
         }
 
+
         .project-card {
+
             background: var(--bg-card);
 
             border: 1px solid var(--border-color);
+
             border-radius: 8px;
 
             padding: 1.75rem;
+
         }
 
+
         .card-visual {
+
             width: 100%;
+
             height: 200px;
 
             background: rgba(255, 255, 255, 0.02);
 
             border: 1px solid var(--border-color);
+
             border-radius: 6px;
 
             overflow: hidden;
 
             margin-bottom: 1.25rem;
+
         }
 
+
         .card-visual img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
             display: block;
+
         }
 
 
@@ -446,100 +701,139 @@
         ========================= */
 
         .expertise-grid {
+
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
             gap: 1.5rem;
+
         }
 
+
         .expertise-card {
+
             background: var(--bg-card);
 
             border: 1px solid var(--border-color);
+
             border-radius: 8px;
 
             padding: 1.5rem;
+
         }
 
+
         .exp-num {
+
             font-size: 0.85rem;
+
             font-weight: 700;
 
             color: var(--accent);
 
             margin-bottom: 0.75rem;
+
         }
 
+
         .exp-title {
+
             font-size: 1.1rem;
+
             font-weight: 700;
 
             margin-bottom: 0.5rem;
+
         }
 
+
         .exp-desc {
+
             color: var(--text-muted);
 
             font-size: 0.875rem;
+
         }
 
 
         /* =========================
-           ARTICLES + BOOKS
+           ARTICLES / BOOKS
         ========================= */
 
         .three-col-grid {
+
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
             gap: 1.5rem;
+
         }
 
+
         .info-card {
+
             background: var(--bg-card);
 
             border: 1px solid var(--border-color);
+
             border-radius: 8px;
 
             padding: 1.5rem;
 
             display: flex;
+
             flex-direction: column;
+
         }
 
+
         .card-thumb {
+
             width: 100%;
+
             height: 160px;
 
             background: rgba(255, 255, 255, 0.02);
 
             border: 1px solid var(--border-color);
+
             border-radius: 4px;
 
             overflow: hidden;
 
             margin-bottom: 1rem;
+
         }
 
+
         .card-thumb img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
             display: block;
+
         }
 
+
         .card-info-title {
+
             font-size: 1.1rem;
+
             font-weight: 700;
 
             margin-bottom: 0.5rem;
+
         }
 
+
         .card-info-desc {
+
             color: var(--text-muted);
 
             font-size: 0.875rem;
@@ -547,9 +841,12 @@
             margin-bottom: 1.25rem;
 
             flex-grow: 1;
+
         }
 
+
         .lang-badge {
+
             font-size: 0.7rem;
 
             color: var(--accent);
@@ -559,6 +856,7 @@
             text-transform: uppercase;
 
             margin-bottom: 0.25rem;
+
         }
 
 
@@ -567,6 +865,7 @@
         ========================= */
 
         .code-grid {
+
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
@@ -574,19 +873,26 @@
             gap: 1.5rem;
 
             margin-bottom: 1.5rem;
+
         }
 
+
         .code-more-box {
+
             background: var(--bg-card);
 
             border: 1px solid var(--border-color);
+
             border-radius: 8px;
 
             padding: 1.5rem;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
         }
 
 
@@ -595,18 +901,25 @@
         ========================= */
 
         .about-content {
-            max-width: 750px;
+
+            max-width: 800px;
+
         }
 
+
         .about-text {
+
             color: var(--text-muted);
 
             font-size: 1.05rem;
 
             margin-bottom: 1.25rem;
+
         }
 
+
         .about-tags {
+
             display: flex;
 
             gap: 0.5rem;
@@ -614,6 +927,61 @@
             margin-top: 2rem;
 
             flex-wrap: wrap;
+
+        }
+
+
+        /* =========================
+           CLIENT REFERENCES
+        ========================= */
+
+        .references-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 1.5rem;
+
+        }
+
+
+        .reference-card {
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            padding: 1rem;
+
+            overflow: hidden;
+
+        }
+
+
+        .reference-image {
+
+            width: 100%;
+
+            overflow: hidden;
+
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.02);
+
+        }
+
+
+        .reference-image img {
+
+            width: 100%;
+
+            height: auto;
+
+            display: block;
+
         }
 
 
@@ -622,36 +990,49 @@
         ========================= */
 
         .contact-box {
+
             text-align: center;
 
-            max-width: 600px;
+            max-width: 700px;
 
             margin: 0 auto;
+
         }
 
+
         .contact-title {
+
             font-size: 2.5rem;
 
             font-weight: 800;
 
             margin-bottom: 1rem;
+
         }
 
+
         .contact-desc {
+
             color: var(--text-muted);
 
             margin-bottom: 2rem;
+
         }
 
+
         .btn-large {
+
             padding: 1.1rem 2.5rem;
 
             font-size: 1rem;
 
             margin-bottom: 2.5rem;
+
         }
 
+
         .contact-links {
+
             display: flex;
 
             justify-content: center;
@@ -665,18 +1046,25 @@
             border-top: 1px solid var(--border-color);
 
             flex-wrap: wrap;
+
         }
 
+
         .contact-link {
+
             font-size: 0.875rem;
 
             font-weight: 600;
 
             color: var(--text-muted);
+
         }
 
+
         .contact-link:hover {
+
             color: var(--accent);
+
         }
 
 
@@ -685,12 +1073,16 @@
         ========================= */
 
         footer {
+
             padding: 2.5rem 0;
 
             background-color: var(--bg-main);
+
         }
 
+
         .footer-container {
+
             display: flex;
 
             justify-content: space-between;
@@ -700,18 +1092,25 @@
             font-size: 0.85rem;
 
             color: var(--text-muted);
+
         }
 
+
         .footer-links {
+
             display: flex;
 
             gap: 1.5rem;
 
             flex-wrap: wrap;
+
         }
 
+
         .footer-links a:hover {
+
             color: var(--accent);
+
         }
 
 
@@ -722,31 +1121,42 @@
         @media (max-width: 992px) {
 
             .hero-grid {
+
                 grid-template-columns: 1fr;
 
                 gap: 3rem;
+
             }
+
 
             .expertise-grid,
             .three-col-grid,
             .code-grid {
+
                 grid-template-columns: repeat(2, 1fr);
+
             }
 
+
             .projects-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
         }
 
 
         @media (max-width: 768px) {
 
             .nav-links {
+
                 display: none;
 
                 position: absolute;
 
                 top: 70px;
+
                 left: 0;
 
                 width: 100%;
@@ -760,60 +1170,101 @@
                 padding: 1.5rem;
 
                 gap: 1.25rem;
+
             }
+
 
             .nav-links.active {
+
                 display: flex;
+
             }
+
 
             .nav-toggle {
+
                 display: block;
+
             }
+
 
             .hero-title {
+
                 font-size: 2.5rem;
+
             }
 
+
             .hero-subtitle {
+
                 font-size: 1.1rem;
+
             }
+
 
             .expertise-grid,
             .three-col-grid,
-            .code-grid {
+            .code-grid,
+            .references-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .featured-project {
+
                 padding: 1.5rem;
+
             }
+
 
             .featured-visual {
+
                 height: 260px;
+
             }
+
 
             .code-more-box {
+
                 flex-direction: column;
 
                 align-items: flex-start;
 
                 gap: 1rem;
+
             }
+
 
             .contact-title {
+
                 font-size: 2rem;
+
             }
 
+
             .footer-container {
+
                 flex-direction: column;
 
                 gap: 1rem;
 
                 align-items: flex-start;
+
             }
+
+
+            .navbar-brand {
+
+                font-size: 1rem;
+
+            }
+
         }
 
     </style>
+
 </head>
 
 
@@ -828,9 +1279,15 @@
 
         <div class="container navbar-container">
 
-            <a href="#" class="navbar-brand">
-                YİĞİT.
+
+            <a
+                href="#"
+                class="navbar-brand">
+
+                Yiğit ÇAKMAN
+
             </a>
+
 
             <button
                 class="nav-toggle"
@@ -840,47 +1297,93 @@
 
             </button>
 
+
             <ul class="nav-links">
 
                 <li>
-                    <a href="#work" class="nav-link">
+                    <a
+                        href="#work"
+                        class="nav-link">
+
                         Projects
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#expertise" class="nav-link">
+                    <a
+                        href="#expertise"
+                        class="nav-link">
+
                         Expertise
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#articles" class="nav-link">
+                    <a
+                        href="#articles"
+                        class="nav-link">
+
                         Articles
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#books" class="nav-link">
+                    <a
+                        href="#books"
+                        class="nav-link">
+
                         Books
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#code" class="nav-link">
+                    <a
+                        href="#code"
+                        class="nav-link">
+
                         Code
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#about" class="nav-link">
+                    <a
+                        href="#about"
+                        class="nav-link">
+
                         About
+
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#contact" class="nav-link">
+                    <a
+                        href="#references"
+                        class="nav-link">
+
+                        References
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="#contact"
+                        class="nav-link">
+
                         Contact
+
                     </a>
                 </li>
 
@@ -903,6 +1406,7 @@
 
             <div class="hero-content">
 
+
                 <div class="hero-badge">
 
                     <span class="badge-dot"></span>
@@ -914,10 +1418,10 @@
 
                 <h1 class="hero-title">
 
-                    FREELANCE SENIOR<br>
+                    GAME<br>
 
                     <span>
-                        GAME DEVELOPER.
+                        DEVELOPER.
                     </span>
 
                 </h1>
@@ -925,21 +1429,26 @@
 
                 <div class="hero-subtitle">
 
-                    Specialized in Multiplayer & Networked Gameplay.
+                    Yiğit ÇAKMAN — Multiplayer & Gameplay Developer
 
                 </div>
 
 
                 <p class="hero-desc">
 
-                    I build multiplayer games, networked gameplay systems,
-                    gameplay mechanics and playable prototypes for clients
-                    and independent projects.
+                    I'm a game developer with
+                    <strong style="color: var(--text-main);">
+                        5+ years of experience
+                    </strong>
+                    in game development, specializing in multiplayer,
+                    networked gameplay, gameplay systems and technical
+                    development.
 
                 </p>
 
 
                 <div class="hero-buttons">
+
 
                     <a
                         href="#work"
@@ -951,10 +1460,12 @@
 
 
                     <a
-                        href="#contact"
+                        href="https://calendly.com/yigitcakman12"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="btn btn-secondary">
 
-                        LET'S WORK TOGETHER
+                        BOOK A CALL
 
                     </a>
 
@@ -967,6 +1478,7 @@
             <!-- HERO VIDEO -->
 
             <div class="hero-visual">
+
 
                 <video
                     autoplay
@@ -983,6 +1495,7 @@
                     Your browser does not support the video element.
 
                 </video>
+
 
             </div>
 
@@ -1027,8 +1540,6 @@
 
 
                 <div class="featured-visual">
-
-                    <!-- VEKTOR FOTOĞRAFI -->
 
                     <img
                         src="imagess/vektorphoto.jpeg"
@@ -1087,14 +1598,13 @@
 
 
 
-            <!-- TOWER DEFENSE + PROTOCOL X -->
-
             <div class="projects-grid">
 
 
                 <!-- TOWER DEFENSE -->
 
                 <div class="project-card">
+
 
                     <div class="card-visual">
 
@@ -1148,6 +1658,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1155,6 +1666,7 @@
                 <!-- PROTOCOL X -->
 
                 <div class="project-card">
+
 
                     <div class="card-visual">
 
@@ -1211,6 +1723,7 @@
                         VIEW PROJECT →
 
                     </a>
+
 
                 </div>
 
@@ -1420,6 +1933,7 @@
 
                 <div class="info-card">
 
+
                     <div class="card-thumb">
 
                         <img
@@ -1456,6 +1970,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1463,6 +1978,7 @@
                 <!-- ARTICLE 2 -->
 
                 <div class="info-card">
+
 
                     <div class="card-thumb">
 
@@ -1500,6 +2016,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1508,11 +2025,12 @@
 
                 <div class="info-card">
 
+
                     <div class="card-thumb">
 
                         <img
                             src="imagess/makale3.jpeg"
-                            alt="Unity Multiplayer Server Authority RPC Network Variables">
+                            alt="Unity Multiplayer Server Authority">
 
                     </div>
 
@@ -1543,6 +2061,7 @@
                         READ ARTICLE →
 
                     </a>
+
 
                 </div>
 
@@ -1576,8 +2095,7 @@
 
             <p class="section-desc">
 
-                Unity and game development books and educational
-                material.
+                Unity and game development books and educational material.
 
             </p>
 
@@ -1588,6 +2106,7 @@
                 <!-- BOOK 1 -->
 
                 <div class="info-card">
+
 
                     <div class="card-thumb">
 
@@ -1628,6 +2147,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1635,6 +2155,7 @@
                 <!-- BOOK 2 -->
 
                 <div class="info-card">
+
 
                     <div class="card-thumb">
 
@@ -1675,6 +2196,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1682,6 +2204,7 @@
                 <!-- BOOK 3 -->
 
                 <div class="info-card">
+
 
                     <div class="card-thumb">
 
@@ -1721,6 +2244,7 @@
                         VIEW BOOK →
 
                     </a>
+
 
                 </div>
 
@@ -1762,18 +2286,26 @@
             <div class="code-grid">
 
 
+                <!-- INVENTORY -->
+
                 <div class="info-card">
+
 
                     <h3 class="card-info-title">
                         Inventory System
                     </h3>
 
+
                     <p class="card-info-desc">
-                        Reusable inventory implementation.
+
+                        A Unity raycast-based pickup and drop system
+                        with item tracking and physics integration.
+
                     </p>
 
+
                     <a
-                        href="https://github.com/Cak-man"
+                        href="https://github.com/Cak-man/Inventory-system"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="link-btn">
@@ -1781,23 +2313,32 @@
                         VIEW ON GITHUB →
 
                     </a>
+
 
                 </div>
 
 
 
+                <!-- PLAYER MOVEMENT -->
+
                 <div class="info-card">
 
+
                     <h3 class="card-info-title">
-                        Health System
+                        Player Movement
                     </h3>
 
+
                     <p class="card-info-desc">
-                        Health, damage and gameplay state system.
+
+                        A modular Unity first-person controller with
+                        movement, sprint, crouch, jump and camera systems.
+
                     </p>
 
+
                     <a
-                        href="https://github.com/Cak-man"
+                        href="https://github.com/Cak-man/Player-Movement"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="link-btn">
@@ -1805,23 +2346,32 @@
                         VIEW ON GITHUB →
 
                     </a>
+
 
                 </div>
 
 
 
+                <!-- HEALTH DAMAGE -->
+
                 <div class="info-card">
 
+
                     <h3 class="card-info-title">
-                        Movement System
+                        Health & Damage System
                     </h3>
 
+
                     <p class="card-info-desc">
-                        Character movement implementation.
+
+                        A modular Unity combat and health system handling
+                        damage, health, death states and cleanup.
+
                     </p>
 
+
                     <a
-                        href="https://github.com/Cak-man"
+                        href="https://github.com/Cak-man/Health-Damage-systems"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="link-btn">
@@ -1829,11 +2379,13 @@
                         VIEW ON GITHUB →
 
                     </a>
+
 
                 </div>
 
 
             </div>
+
 
 
             <div class="code-more-box">
@@ -1912,19 +2464,24 @@
 
                 <p class="about-text">
 
-                    I'm a Freelance Senior Game Developer specializing
-                    in multiplayer and networked gameplay. I work across
-                    gameplay programming, game systems, prototyping,
-                    optimization, and technical development.
+                    I'm <strong style="color: var(--text-main);">
+                        Yiğit ÇAKMAN
+                    </strong>,
+                    a game developer with
+                    <strong style="color: var(--text-main);">
+                        5+ years of experience
+                    </strong>
+                    in game development.
 
                 </p>
 
 
                 <p class="about-text">
 
-                    With experience across different areas of game
-                    development, I focus on building systems that are
-                    reliable, scalable, and enjoyable to play.
+                    I specialize in multiplayer and networked gameplay,
+                    while also working across gameplay programming,
+                    game systems, prototyping, optimization and
+                    technical development.
 
                 </p>
 
@@ -1932,7 +2489,7 @@
                 <p class="about-text">
 
                     I work with clients and independent teams to turn
-                    ideas into playable, polished, and technically solid
+                    ideas into playable, polished and technically solid
                     game experiences.
 
                 </p>
@@ -1940,25 +2497,137 @@
 
                 <div class="about-tags">
 
+
+                    <span class="tag">
+                        5+ Years Experience
+                    </span>
+
+
                     <span class="tag">
                         Multiplayer
                     </span>
+
 
                     <span class="tag">
                         Gameplay
                     </span>
 
+
                     <span class="tag">
                         Systems
                     </span>
+
 
                     <span class="tag">
                         Prototyping
                     </span>
 
+
                     <span class="tag">
                         Optimization
                     </span>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CLIENT REFERENCES
+    ========================= -->
+
+    <section id="references">
+
+        <div class="container">
+
+
+            <span class="section-label">
+                CLIENT REFERENCES
+            </span>
+
+
+            <h2 class="section-title">
+                What clients say.
+            </h2>
+
+
+            <p class="section-desc">
+
+                Feedback and references from clients I've worked with
+                across game development and technical projects.
+
+            </p>
+
+
+            <div class="references-grid">
+
+
+                <!-- REFERENCE 1 -->
+
+                <div class="reference-card">
+
+                    <div class="reference-image">
+
+                        <img
+                            src="imagess/reference1.jpeg"
+                            alt="Client Reference 1">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REFERENCE 2 -->
+
+                <div class="reference-card">
+
+                    <div class="reference-image">
+
+                        <img
+                            src="imagess/reference2.jpeg"
+                            alt="Client Reference 2">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REFERENCE 3 -->
+
+                <div class="reference-card">
+
+                    <div class="reference-image">
+
+                        <img
+                            src="imagess/reference3.jpeg"
+                            alt="Client Reference 3">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REFERENCE 4 -->
+
+                <div class="reference-card">
+
+                    <div class="reference-image">
+
+                        <img
+                            src="imagess/reference4.jpeg"
+                            alt="Client Reference 4">
+
+                    </div>
 
                 </div>
 
@@ -2003,19 +2672,23 @@
                 </p>
 
 
-                <!-- GMAIL -->
+                <!-- CALENDLY -->
 
                 <a
-                    href="mailto:yigitcakman78.87@gmail.com"
+                    href="https://calendly.com/yigitcakman12"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="btn btn-primary btn-large">
 
-                    GET IN TOUCH
+                    BOOK A CALL
 
                 </a>
 
 
                 <div class="contact-links">
 
+
+                    <!-- EMAIL -->
 
                     <a
                         href="mailto:yigitcakman78.87@gmail.com"
@@ -2052,6 +2725,19 @@
                     </a>
 
 
+                    <!-- CALENDLY -->
+
+                    <a
+                        href="https://calendly.com/yigitcakman12"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link">
+
+                        Calendly
+
+                    </a>
+
+
                 </div>
 
 
@@ -2074,8 +2760,8 @@
 
             <div>
 
-                © 2026 Yiğit Çakman —
-                Freelance Senior Game Developer
+                © 2026 Yiğit ÇAKMAN —
+                Game Developer
 
             </div>
 
@@ -2104,6 +2790,16 @@
 
 
                 <a
+                    href="https://calendly.com/yigitcakman12"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Calendly
+
+                </a>
+
+
+                <a
                     href="mailto:yigitcakman78.87@gmail.com">
 
                     Email
@@ -2112,6 +2808,7 @@
 
 
             </div>
+
 
         </div>
 
@@ -2125,8 +2822,10 @@
 
     <script>
 
+
         const toggleBtn =
             document.querySelector('.nav-toggle');
+
 
         const navLinks =
             document.querySelector('.nav-links');
@@ -2134,29 +2833,38 @@
 
         if (toggleBtn && navLinks) {
 
-            toggleBtn.addEventListener('click', () => {
 
-                navLinks.classList.toggle('active');
+            toggleBtn.addEventListener(
+                'click',
+                () => {
 
-            });
+                    navLinks.classList.toggle('active');
+
+                }
+            );
 
 
             document
                 .querySelectorAll('.nav-link')
                 .forEach(link => {
 
-                    link.addEventListener('click', () => {
+                    link.addEventListener(
+                        'click',
+                        () => {
 
-                        navLinks.classList.remove('active');
+                            navLinks.classList.remove('active');
 
-                    });
+                        }
+                    );
 
                 });
 
         }
 
+
     </script>
 
 
 </body>
+
 </html>
