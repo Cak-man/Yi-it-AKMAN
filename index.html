@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Yiğit Çakman — Freelance Senior Game Developer</title>
-    <meta name="description" content="Freelance Senior Game Developer specializing in multiplayer, networked gameplay, gameplay systems and game prototyping.">
+
+    <meta name="description" content="Yiğit Çakman — Freelance Senior Game Developer specializing in multiplayer, gameplay systems, game development and technical projects.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,13 +49,19 @@
             transition: color 0.2s ease;
         }
 
+        img,
+        video {
+            max-width: 100%;
+        }
+
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* 1. NAVBAR */
+        /* NAVBAR */
+
         .navbar {
             position: fixed;
             top: 0;
@@ -89,9 +98,9 @@
             color: var(--text-muted);
         }
 
-            .nav-link:hover {
-                color: var(--text-main);
-            }
+        .nav-link:hover {
+            color: var(--text-main);
+        }
 
         .nav-toggle {
             display: none;
@@ -102,7 +111,8 @@
             cursor: pointer;
         }
 
-        /* SECTIONS GENERAL */
+        /* GENERAL SECTIONS */
+
         section {
             padding: 6rem 0;
             border-bottom: 1px solid var(--border-color);
@@ -132,7 +142,8 @@
             font-size: 1rem;
         }
 
-        /* 2. HERO */
+        /* HERO */
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -177,9 +188,9 @@
             margin-bottom: 1.5rem;
         }
 
-            .hero-title span {
-                color: var(--accent);
-            }
+        .hero-title span {
+            color: var(--accent);
+        }
 
         .hero-subtitle {
             font-size: 1.25rem;
@@ -198,6 +209,7 @@
         .hero-buttons {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -217,10 +229,10 @@
             color: #000;
         }
 
-            .btn-primary:hover {
-                opacity: 0.9;
-                transform: translateY(-2px);
-            }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
 
         .btn-secondary {
             background: transparent;
@@ -228,39 +240,37 @@
             border: 1px solid var(--border-color);
         }
 
-            .btn-secondary:hover {
-                border-color: rgba(255, 255, 255, 0.3);
-                background: rgba(255, 255, 255, 0.02);
-                transform: translateY(-2px);
-            }
+        .btn-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.02);
+            transform: translateY(-2px);
+        }
 
         .hero-visual {
             position: relative;
             width: 100%;
-            aspect-ratio: 16/10;
+            aspect-ratio: 16 / 10;
             background-color: var(--bg-card);
             border-radius: 8px;
             border: 1px solid var(--border-color);
             box-shadow: 0 0 30px var(--accent-glow);
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             transition: transform 0.3s ease;
         }
 
-            .hero-visual:hover {
-                transform: scale(1.01);
-            }
-
-        .placeholder-text {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: center;
+        .hero-visual:hover {
+            transform: scale(1.01);
         }
 
-        /* 3. WORK */
+        .hero-visual video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* PROJECTS */
+
         .featured-project {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -275,10 +285,15 @@
             background-color: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             margin-bottom: 2rem;
+        }
+
+        .featured-visual video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .project-title {
@@ -318,9 +333,9 @@
             font-size: 0.9rem;
         }
 
-            .link-btn:hover {
-                text-decoration: underline;
-            }
+        .link-btn:hover {
+            text-decoration: underline;
+        }
 
         .projects-grid {
             display: grid;
@@ -341,13 +356,19 @@
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             margin-bottom: 1.25rem;
         }
 
-        /* 4. EXPERTISE */
+        .card-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* EXPERTISE */
+
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -379,7 +400,8 @@
             font-size: 0.875rem;
         }
 
-        /* 5. ARTICLES & BOOKS */
+        /* ARTICLES & BOOKS */
+
         .three-col-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -401,10 +423,15 @@
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             margin-bottom: 1rem;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .card-info-title {
@@ -428,7 +455,8 @@
             margin-bottom: 0.25rem;
         }
 
-        /* 6. CODE & ASSETS */
+        /* CODE */
+
         .code-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -446,7 +474,8 @@
             align-items: center;
         }
 
-        /* 7. ABOUT */
+        /* ABOUT */
+
         .about-content {
             max-width: 750px;
         }
@@ -461,9 +490,11 @@
             display: flex;
             gap: 0.5rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
-        /* 8. CONTACT */
+        /* CONTACT */
+
         .contact-box {
             text-align: center;
             max-width: 600px;
@@ -494,6 +525,7 @@
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid var(--border-color);
+            flex-wrap: wrap;
         }
 
         .contact-link {
@@ -502,11 +534,12 @@
             color: var(--text-muted);
         }
 
-            .contact-link:hover {
-                color: var(--accent);
-            }
+        .contact-link:hover {
+            color: var(--accent);
+        }
 
-        /* 9. FOOTER */
+        /* FOOTER */
+
         footer {
             padding: 2.5rem 0;
             background-color: var(--bg-main);
@@ -523,16 +556,24 @@
         .footer-links {
             display: flex;
             gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        /* 10. RESPONSIVE MEDIA QUERIES */
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* RESPONSIVE */
+
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
 
-            .expertise-grid, .three-col-grid, .code-grid {
+            .expertise-grid,
+            .three-col-grid,
+            .code-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -555,9 +596,9 @@
                 gap: 1.25rem;
             }
 
-                .nav-links.active {
-                    display: flex;
-                }
+            .nav-links.active {
+                display: flex;
+            }
 
             .nav-toggle {
                 display: block;
@@ -567,8 +608,22 @@
                 font-size: 2.5rem;
             }
 
-            .expertise-grid, .three-col-grid, .code-grid {
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .expertise-grid,
+            .three-col-grid,
+            .code-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .featured-project {
+                padding: 1.5rem;
+            }
+
+            .featured-visual {
+                height: 260px;
             }
 
             .code-more-box {
@@ -589,301 +644,879 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container navbar-container">
-            <a href="#" class="navbar-brand">YİĞİT.</a>
-            <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+            <a href="#" class="navbar-brand">
+                YİĞİT.
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
+
             <ul class="nav-links">
-                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#work" class="nav-link">Projects</a></li>
                 <li><a href="#expertise" class="nav-link">Expertise</a></li>
                 <li><a href="#articles" class="nav-link">Articles</a></li>
                 <li><a href="#books" class="nav-link">Books</a></li>
                 <li><a href="#code" class="nav-link">Code</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-       
+            </ul>
+
         </div>
     </nav>
 
+
     <!-- HERO -->
     <section class="hero">
+
         <div class="container hero-grid">
+
             <div class="hero-content">
+
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
                     Available for freelance projects
                 </div>
-                <h1 class="hero-title">FREELANCE SENIOR<br><span>GAME DEVELOPER.</span></h1>
-                <div class="hero-subtitle">Specialized in Multiplayer & Networked Gameplay.</div>
-                <p class="hero-desc">I build multiplayer games, networked gameplay systems, gameplay mechanics and playable prototypes for clients and independent projects.</p>
-                <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">VIEW MY WORK</a>
-                    <a href="#contact" class="btn btn-secondary">LET'S WORK TOGETHER</a>
+
+                <h1 class="hero-title">
+                    FREELANCE SENIOR<br>
+                    <span>GAME DEVELOPER.</span>
+                </h1>
+
+                <div class="hero-subtitle">
+                    Specialized in Multiplayer & Networked Gameplay.
                 </div>
+
+                <p class="hero-desc">
+                    I build multiplayer games, networked gameplay systems,
+                    gameplay mechanics and playable prototypes for clients
+                    and independent projects.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">
+                        VIEW MY WORK
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        LET'S WORK TOGETHER
+                    </a>
+                </div>
+
             </div>
+
+
             <div class="hero-visual">
-                <div class="placeholder-text">[ VEKTOR Gameplay Media Placeholder ]</div>
+
+                <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="imagess/vektorphoto.jpeg">
+
+                    <source
+                        src="imagess/vektorvideo.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video element.
+
+                </video>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- WORK / PROJECTS -->
-    <section id="work">
-        <div class="container">
-            <span class="section-label">SELECTED WORK</span>
-            <h2 class="section-title">Projects.</h2>
-            <p class="section-desc">A selection of games and prototypes showcasing my work across multiplayer, gameplay programming and game systems.</p>
 
-            <!-- 1. VEKTOR (FEATURED) -->
+    <!-- PROJECTS -->
+    <section id="work">
+
+        <div class="container">
+
+            <span class="section-label">
+                SELECTED WORK
+            </span>
+
+            <h2 class="section-title">
+                Projects.
+            </h2>
+
+            <p class="section-desc">
+                A selection of games and prototypes showcasing my work
+                across multiplayer, gameplay programming and game systems.
+            </p>
+
+
+            <!-- VEKTOR -->
             <div class="featured-project">
+
                 <div class="featured-visual">
-                    <div class="placeholder-text">[ VEKTOR Showcase Placeholder ]</div>
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="imagess/vektorphoto.jpeg">
+
+                        <source
+                            src="imagess/vektorvideo.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support the video element.
+
+                    </video>
+
                 </div>
-                <h3 class="project-title">VEKTOR</h3>
-                <p class="project-desc">A multiplayer-focused game project demonstrating networked gameplay, gameplay systems and technical game development.</p>
+
+                <h3 class="project-title">
+                    VEKTOR
+                </h3>
+
+                <p class="project-desc">
+                    A multiplayer-focused game project demonstrating
+                    networked gameplay, gameplay systems and technical
+                    game development.
+                </p>
+
                 <div class="tags">
                     <span class="tag">Multiplayer</span>
                     <span class="tag">Networking</span>
                     <span class="tag">Gameplay</span>
                     <span class="tag">Systems</span>
                 </div>
-                <a href="PLACEHOLDER_URL" class="link-btn">VIEW PROJECT →</a>
+
+                <a href="PLACEHOLDER_URL" class="link-btn">
+                    VIEW PROJECT →
+                </a>
+
             </div>
 
-            <!-- 2 & 3. TOWER DEFENCE & PROTOCOL X -->
+
+            <!-- TOWER DEFENSE + PROTOCOL X -->
             <div class="projects-grid">
+
+
+                <!-- TOWER DEFENSE -->
                 <div class="project-card">
+
                     <div class="card-visual">
-                        <div class="placeholder-text">[ Tower Defence Prototype ]</div>
+
+                        <img
+                            src="imagess/towerdefensephoto.jpeg"
+                            alt="Tower Defense project">
+
                     </div>
-                    <h3 class="project-title">TOWER DEFENCE PROTOTYPE</h3>
-                    <p class="project-desc">A gameplay prototype focused on tower defence mechanics, systems and player interaction.</p>
+
+                    <h3 class="project-title">
+                        TOWER DEFENSE ENGINE
+                    </h3>
+
+                    <p class="project-desc">
+                        A gameplay project focused on tower defence
+                        mechanics, systems, player interaction and
+                        gameplay architecture.
+                    </p>
+
                     <div class="tags">
                         <span class="tag">Gameplay</span>
                         <span class="tag">Prototyping</span>
                         <span class="tag">Systems</span>
                     </div>
-                    <a href="PLACEHOLDER_URL" class="link-btn">VIEW PROJECT →</a>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        VIEW PROJECT →
+                    </a>
+
                 </div>
 
+
+                <!-- PROTOCOL X -->
                 <div class="project-card">
+
                     <div class="card-visual">
-                        <div class="placeholder-text">[ Protocol X Visual ]</div>
+
+                        <img
+                            src="imagess/protocolxphoto.jpeg"
+                            alt="Protocol X project">
+
                     </div>
-                    <h3 class="project-title">PROTOCOL X</h3>
-                    <p class="project-desc">My first game project and an early step in my game development journey.</p>
+
+                    <h3 class="project-title">
+                        PROTOCOL X
+                    </h3>
+
+                    <p class="project-desc">
+                        An independent horror game project featuring
+                        gameplay systems, AI, interaction mechanics,
+                        puzzles and a historical narrative.
+                    </p>
+
                     <div class="tags">
-                        <span class="tag">Game Development</span>
+                        <span class="tag">Horror</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">AI</span>
                         <span class="tag">Independent</span>
                     </div>
-                    <a href="PLACEHOLDER_URL" class="link-btn">VIEW PROJECT →</a>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        VIEW PROJECT →
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- EXPERTISE -->
     <section id="expertise">
+
         <div class="container">
-            <span class="section-label">EXPERTISE</span>
-            <h2 class="section-title">What I build.</h2>
-            <p class="section-desc">Multiplayer is my specialty, while my experience covers a broad range of game development disciplines.</p>
+
+            <span class="section-label">
+                EXPERTISE
+            </span>
+
+            <h2 class="section-title">
+                What I build.
+            </h2>
+
+            <p class="section-desc">
+                Multiplayer is my specialty, while my experience covers
+                a broad range of game development disciplines.
+            </p>
+
 
             <div class="expertise-grid">
+
                 <div class="expertise-card">
                     <div class="exp-num">01</div>
-                    <h3 class="exp-title">Multiplayer Development</h3>
-                    <p class="exp-desc">Networked gameplay, synchronization, multiplayer architecture and online gameplay systems.</p>
+                    <h3 class="exp-title">
+                        Multiplayer Development
+                    </h3>
+                    <p class="exp-desc">
+                        Networked gameplay, synchronization,
+                        multiplayer architecture and online gameplay systems.
+                    </p>
                 </div>
+
+
                 <div class="expertise-card">
                     <div class="exp-num">02</div>
-                    <h3 class="exp-title">Gameplay Programming</h3>
-                    <p class="exp-desc">Player mechanics, combat, movement, interaction and gameplay features.</p>
+                    <h3 class="exp-title">
+                        Gameplay Programming
+                    </h3>
+                    <p class="exp-desc">
+                        Player mechanics, combat, movement,
+                        interaction and gameplay features.
+                    </p>
                 </div>
+
+
                 <div class="expertise-card">
                     <div class="exp-num">03</div>
-                    <h3 class="exp-title">Game Systems</h3>
-                    <p class="exp-desc">Inventory, health, progression, abilities, weapons and reusable gameplay systems.</p>
+                    <h3 class="exp-title">
+                        Game Systems
+                    </h3>
+                    <p class="exp-desc">
+                        Inventory, health, progression, abilities,
+                        weapons and reusable gameplay systems.
+                    </p>
                 </div>
+
+
                 <div class="expertise-card">
                     <div class="exp-num">04</div>
-                    <h3 class="exp-title">Game Prototyping</h3>
-                    <p class="exp-desc">Turning ideas and concepts into playable, testable game prototypes.</p>
+                    <h3 class="exp-title">
+                        Game Prototyping
+                    </h3>
+                    <p class="exp-desc">
+                        Turning ideas and concepts into playable,
+                        testable game prototypes.
+                    </p>
                 </div>
+
+
                 <div class="expertise-card">
                     <div class="exp-num">05</div>
-                    <h3 class="exp-title">Optimization</h3>
-                    <p class="exp-desc">Performance optimization, debugging, refactoring and technical improvements.</p>
+                    <h3 class="exp-title">
+                        Optimization
+                    </h3>
+                    <p class="exp-desc">
+                        Performance optimization, debugging,
+                        refactoring and technical improvements.
+                    </p>
                 </div>
+
+
                 <div class="expertise-card">
                     <div class="exp-num">06</div>
-                    <h3 class="exp-title">Tools & Development Systems</h3>
-                    <p class="exp-desc">Reusable tools, workflows and technical systems designed for efficient development.</p>
+                    <h3 class="exp-title">
+                        Tools & Development Systems
+                    </h3>
+                    <p class="exp-desc">
+                        Reusable tools, workflows and technical systems
+                        designed for efficient development.
+                    </p>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- ARTICLES -->
+
+    <!-- ARTICLES & SYSTEMS -->
     <section id="articles">
+
         <div class="container">
-            <span class="section-label">KNOWLEDGE</span>
-            <h2 class="section-title">Articles.</h2>
-            <p class="section-desc">Technical writing focused primarily on multiplayer game development and networked gameplay.</p>
+
+            <span class="section-label">
+                KNOWLEDGE
+            </span>
+
+            <h2 class="section-title">
+                Articles & Systems.
+            </h2>
+
+            <p class="section-desc">
+                Technical writing and development knowledge focused
+                on game development, systems and programming.
+            </p>
+
 
             <div class="three-col-grid">
+
+
+                <!-- ARTICLE 1 -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Article 1 ]</div></div>
-                    <h3 class="card-info-title">Network State Synchronization in Multiplayer Games</h3>
-                    <p class="card-info-desc">An overview of synchronization strategies and state management for real-time multiplayer titles.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">Read Article →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/makale1.jpeg"
+                            alt="Article 1">
+
+                    </div>
+
+                    <h3 class="card-info-title">
+                        Network State Synchronization in Multiplayer Games
+                    </h3>
+
+                    <p class="card-info-desc">
+                        An overview of synchronization strategies and
+                        state management for real-time multiplayer titles.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        READ ARTICLE →
+                    </a>
+
                 </div>
+
+
+                <!-- ARTICLE 2 -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Article 2 ]</div></div>
-                    <h3 class="card-info-title">Client-Side Prediction and Lag Compensation</h3>
-                    <p class="card-info-desc">Technical breakdown of responsive player movement architecture in high-latency environments.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">Read Article →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/makale2.jpeg"
+                            alt="Article 2">
+
+                    </div>
+
+                    <h3 class="card-info-title">
+                        Client-Side Prediction and Lag Compensation
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Technical breakdown of responsive player movement
+                        architecture in high-latency environments.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        READ ARTICLE →
+                    </a>
+
                 </div>
+
+
+                <!-- ARTICLE 3 -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Article 3 ]</div></div>
-                    <h3 class="card-info-title">Designing Scalable Multiplayer Game Systems</h3>
-                    <p class="card-info-desc">Best practices for building modular and maintainable server-authoritative game loops.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">Read Article →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/makale3.jpeg"
+                            alt="Article 3">
+
+                    </div>
+
+                    <h3 class="card-info-title">
+                        Designing Scalable Multiplayer Game Systems
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Best practices for building modular and maintainable
+                        server-authoritative game loops.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        READ ARTICLE →
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- BOOKS -->
     <section id="books">
+
         <div class="container">
-            <span class="section-label">PUBLICATIONS</span>
-            <h2 class="section-title">Books.</h2>
-            <p class="section-desc"></p>
+
+            <span class="section-label">
+                PUBLICATIONS
+            </span>
+
+            <h2 class="section-title">
+                Books.
+            </h2>
+
+            <p class="section-desc">
+                Game development books and educational material focused
+                on Unity and game programming.
+            </p>
+
 
             <div class="three-col-grid">
+
+
+                <!-- UNITY KITAP 1 -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Book Cover 1 ]</div></div>
-                    <span class="lang-badge">Turkish</span>
-                    <h3 class="card-info-title">Oyun Geliştirme El Kitabı</h3>
-                    <p class="card-info-desc">A comprehensive guide focused on game development fundamentals and architecture.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">View Book →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/unitykitap1.jpeg"
+                            alt="Unity book 1">
+
+                    </div>
+
+                    <span class="lang-badge">
+                        Turkish
+                    </span>
+
+                    <h3 class="card-info-title">
+                        Unity Game Development
+                    </h3>
+
+                    <p class="card-info-desc">
+                        A Unity-focused resource covering game development
+                        fundamentals, programming and practical systems.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        VIEW BOOK →
+                    </a>
+
                 </div>
+
+
+                <!-- UNITY KITAP 2 -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Book Cover 2 ]</div></div>
-                    <span class="lang-badge">Turkish Series</span>
-                    <h3 class="card-info-title">İleri Seviye Oyun Sistemleri</h3>
-                    <p class="card-info-desc">Multi-part book series diving into advanced systems programming and optimization.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">View Book →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/unitykitap2.jpeg"
+                            alt="Unity book 2">
+
+                    </div>
+
+                    <span class="lang-badge">
+                        Turkish
+                    </span>
+
+                    <h3 class="card-info-title">
+                        Advanced Unity Systems
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Advanced Unity development concepts, systems
+                        programming and practical game architecture.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        VIEW BOOK →
+                    </a>
+
                 </div>
+
+
+                <!-- UNITY BOOK -->
                 <div class="info-card">
-                    <div class="card-thumb"><div class="placeholder-text">[ Book Cover 3 ]</div></div>
-                    <span class="lang-badge">English</span>
-                    <h3 class="card-info-title">Multiplayer Architecture & Networking</h3>
-                    <p class="card-info-desc">Practical insights into building networked gameplay systems and online architecture.</p>
-                    <a href="PLACEHOLDER_URL" class="link-btn">View Book →</a>
+
+                    <div class="card-thumb">
+
+                        <img
+                            src="imagess/unitybook.jpeg"
+                            alt="Unity book">
+
+                    </div>
+
+                    <span class="lang-badge">
+                        English
+                    </span>
+
+                    <h3 class="card-info-title">
+                        Unity Game Development Guide
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Practical material for learning Unity,
+                        gameplay programming and game development systems.
+                    </p>
+
+                    <a href="PLACEHOLDER_URL" class="link-btn">
+                        VIEW BOOK →
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- CODE & ASSETS -->
+
+    <!-- CODE & SYSTEMS -->
     <section id="code">
+
         <div class="container">
-            <span class="section-label">OPEN SOURCE</span>
-            <h2 class="section-title">Code & Assets.</h2>
-            <p class="section-desc">Reusable gameplay systems and development assets.</p>
+
+            <span class="section-label">
+                OPEN SOURCE
+            </span>
+
+            <h2 class="section-title">
+                Code & Systems.
+            </h2>
+
+            <p class="section-desc">
+                Reusable gameplay systems and development projects.
+            </p>
+
 
             <div class="code-grid">
+
+
                 <div class="info-card">
-                    <h3 class="card-info-title">Inventory System</h3>
-                    <p class="card-info-desc">Reusable inventory implementation.</p>
-                    <a href="https://github.com/Cak-man" target="_blank" class="link-btn">VIEW ON GITHUB →</a>
+
+                    <h3 class="card-info-title">
+                        Inventory System
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Reusable inventory implementation.
+                    </p>
+
+                    <a
+                        href="https://github.com/Cak-man"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-btn">
+
+                        VIEW ON GITHUB →
+
+                    </a>
+
                 </div>
+
+
                 <div class="info-card">
-                    <h3 class="card-info-title">Health System</h3>
-                    <p class="card-info-desc">Health, damage and gameplay state system.</p>
-                    <a href="https://github.com/Cak-man" target="_blank" class="link-btn">VIEW ON GITHUB →</a>
+
+                    <h3 class="card-info-title">
+                        Health System
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Health, damage and gameplay state system.
+                    </p>
+
+                    <a
+                        href="https://github.com/Cak-man"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-btn">
+
+                        VIEW ON GITHUB →
+
+                    </a>
+
                 </div>
+
+
                 <div class="info-card">
-                    <h3 class="card-info-title">Movement System</h3>
-                    <p class="card-info-desc">Character movement implementation.</p>
-                    <a href="https://github.com/Cak-man" target="_blank" class="link-btn">VIEW ON GITHUB →</a>
+
+                    <h3 class="card-info-title">
+                        Movement System
+                    </h3>
+
+                    <p class="card-info-desc">
+                        Character movement implementation.
+                    </p>
+
+                    <a
+                        href="https://github.com/Cak-man"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-btn">
+
+                        VIEW ON GITHUB →
+
+                    </a>
+
                 </div>
+
             </div>
 
+
             <div class="code-more-box">
+
                 <div>
-                    <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">More Systems & Assets</h4>
-                    <p style="color: var(--text-muted); font-size: 0.875rem;">Additional development systems and projects.</p>
+
+                    <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem;">
+                        More Systems & Assets
+                    </h4>
+
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        Additional development systems and projects.
+                    </p>
+
                 </div>
-                <a href="https://github.com/Cak-man" target="_blank" class="btn btn-secondary">VIEW GITHUB →</a>
+
+                <a
+                    href="https://github.com/Cak-man"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary">
+
+                    VIEW GITHUB →
+
+                </a>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ABOUT -->
     <section id="about">
+
         <div class="container">
-            <span class="section-label">ABOUT</span>
-            <h2 class="section-title">Building multiplayer experiences and reliable game systems.</h2>
+
+            <span class="section-label">
+                ABOUT
+            </span>
+
+            <h2 class="section-title">
+                Building multiplayer experiences and reliable game systems.
+            </h2>
+
             <div class="about-content">
-                <p class="about-text">I'm a Freelance Senior Game Developer specializing in multiplayer and networked gameplay. I work across gameplay programming, game systems, prototyping, optimization, and technical development.</p>
-                <p class="about-text">With experience across different areas of game development, I focus on building systems that are reliable, scalable, and enjoyable to play.</p>
-                <p class="about-text">I work with clients and independent teams to turn ideas into playable, polished, and technically solid game experiences.</p>
+
+                <p class="about-text">
+                    I'm a Freelance Senior Game Developer specializing in
+                    multiplayer and networked gameplay. I work across
+                    gameplay programming, game systems, prototyping,
+                    optimization, and technical development.
+                </p>
+
+                <p class="about-text">
+                    With experience across different areas of game development,
+                    I focus on building systems that are reliable, scalable,
+                    and enjoyable to play.
+                </p>
+
+                <p class="about-text">
+                    I work with clients and independent teams to turn ideas
+                    into playable, polished, and technically solid game experiences.
+                </p>
+
 
                 <div class="about-tags">
+
                     <span class="tag">Multiplayer</span>
                     <span class="tag">Gameplay</span>
                     <span class="tag">Systems</span>
                     <span class="tag">Prototyping</span>
                     <span class="tag">Optimization</span>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact">
+
         <div class="container">
+
             <div class="contact-box">
-                <span class="section-label">CONTACT</span>
-                <h2 class="contact-title">Have a game project in mind?</h2>
-                <p class="contact-desc">Let's discuss your project, technical requirements and how I can help bring it to life.</p>
-                <a href="mailto:PLACEHOLDER_EMAIL" class="btn btn-primary btn-large">GET IN TOUCH</a>
+
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+                <h2 class="contact-title">
+                    Have a game project in mind?
+                </h2>
+
+                <p class="contact-desc">
+                    Let's discuss your project, technical requirements
+                    and how I can help bring it to life.
+                </p>
+
+                <a
+                    href="mailto:PLACEHOLDER_EMAIL"
+                    class="btn btn-primary btn-large">
+
+                    GET IN TOUCH
+
+                </a>
+
 
                 <div class="contact-links">
-                    <a href="mailto:PLACEHOLDER_EMAIL" class="contact-link">Email</a>
-                    <a href="https://github.com/Cak-man" target="_blank" class="contact-link">GitHub</a>
-                    <a href="PLACEHOLDER_LINKEDIN" target="_blank" class="contact-link">LinkedIn</a>
+
+                    <a
+                        href="mailto:PLACEHOLDER_EMAIL"
+                        class="contact-link">
+
+                        Email
+
+                    </a>
+
+                    <a
+                        href="https://github.com/Cak-man"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link">
+
+                        GitHub
+
+                    </a>
+
+                    <a
+                        href="PLACEHOLDER_LINKEDIN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link">
+
+                        LinkedIn
+
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- FOOTER -->
     <footer>
+
         <div class="container footer-container">
-            <div>© 2026 Yiğit Çakman — Freelance Senior Game Developer</div>
-            <div class="footer-links">
-                <a href="https://github.com/Cak-man" target="_blank">GitHub</a>
-                <a href="PLACEHOLDER_LINKEDIN" target="_blank">LinkedIn</a>
-                <a href="mailto:PLACEHOLDER_EMAIL">Email</a>
+
+            <div>
+                © 2026 Yiğit Çakman — Freelance Senior Game Developer
             </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="https://github.com/Cak-man"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub
+
+                </a>
+
+                <a
+                    href="PLACEHOLDER_LINKEDIN"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LinkedIn
+
+                </a>
+
+                <a
+                    href="mailto:PLACEHOLDER_EMAIL">
+
+                    Email
+
+                </a>
+
+            </div>
+
         </div>
+
     </footer>
 
+
+    <!-- MOBILE NAVIGATION -->
     <script>
+
         const toggleBtn = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        if (toggleBtn) {
+
+        if (toggleBtn && navLinks) {
+
             toggleBtn.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
             });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+
+            });
+
         }
+
     </script>
+
 </body>
 </html>
